@@ -14,7 +14,7 @@ const urlBase64ToUint8Array = base64String => {
     return outputArray;
 }
 const saveSubscription = async (subscription) => {
-    const response = await fetch('http://localhost:3000/api/save-subscription', {
+    const response = await fetch('https://service-worker-sigma.vercel.app/api/save-subscription', {
         method: 'post',
         headers: { 'Content-type': "application/json" },
         body: JSON.stringify(subscription)
